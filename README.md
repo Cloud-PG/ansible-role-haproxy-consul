@@ -1,38 +1,33 @@
-Role Name
+Chronos Role
 =========
 
-A brief description of the role goes here.
+Configure and start haproxy-consul[1] in a docker container using the image `ciscocloud/haproxy-consul:latest`. 
 
-Requirements
-------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+[1] https://github.com/CiscoCloud/haproxy-consul
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- `haproxy_consul_mode` (default: marathon)
+- `haproxy_consul_version` (default: latest)
+- `haproxy_consul_image` (default: ciscocloud/haproxy-consul:{{haproxy_consul_version}}) 
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+- `indigo-dc.docker`
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: indigo-dc.haproxy-consul, haproxy_consul_mode: "marathon" }
 
 License
 -------
 
-BSD
+Apache Licence v2 [2]
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+[2] http://www.apache.org/licenses/LICENSE-2.0
