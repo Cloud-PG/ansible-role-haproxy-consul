@@ -1,4 +1,4 @@
-Chronos Role
+haproxy-consul Role
 =========
 
 Configure and start haproxy-consul[1] in a docker container using the image `ciscocloud/haproxy-consul:latest`. 
