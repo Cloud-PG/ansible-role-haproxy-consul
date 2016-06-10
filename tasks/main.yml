@@ -2,7 +2,7 @@
   docker:
     name: haproxy
     image: "{{ haproxy_consul_image }}"
-    state: started
+    state: reloaded
     detach: true
     restart_policy: always
     net: host
