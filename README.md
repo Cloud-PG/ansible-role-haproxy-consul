@@ -1,7 +1,7 @@
 haproxy-consul Role
 =========
 
-Configure and start haproxy-consul[1] in a docker container using the image `ciscocloud/haproxy-consul:latest`. 
+Configure and start haproxy-consul[1] in a docker container using the image `indigodatacloud/haproxy-consul:latest`. 
 
 [1] https://github.com/CiscoCloud/haproxy-consul
 
@@ -10,7 +10,7 @@ Role Variables
 
 - `haproxy_consul_mode` (default: marathon)
 - `haproxy_consul_version` (default: latest)
-- `haproxy_consul_image` (default: ciscocloud/haproxy-consul:{{haproxy_consul_version}}) 
+- `haproxy_consul_image` (default: indigodatacloud/haproxy-consul:{{haproxy_consul_version}}) 
 
 
 Dependencies
