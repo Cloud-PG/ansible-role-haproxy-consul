@@ -14,4 +14,4 @@ galaxy_info:
    - mesos
 
 dependencies: 
-   - { role: indigo-dc.docker }
+   - { role: Cloud-PG.docker }
